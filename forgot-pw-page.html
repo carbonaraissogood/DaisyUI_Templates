@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="light dark">
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Email Verification</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="scripts/forgot-pw-page.js"></script>
+
+  </head>
+
+  <body class="min-h-screen bg-primary flex items-center justify-center">
+    <div class="card w-[30rem] h-[24rem] bg-white shadow-2xl">
+      <div class="card-body flex flex-col gap-4 p-10">
+
+        <h1 class="text-2xl font-bold">
+          Forgot Password
+        </h1>
+
+        <h2 class="text-sm">
+          Please enter the email address you'd like your password reset information sent to
+        </h2>
+
+        <div class="flex flex-col">
+          <h2 class="text-sm">Enter email address</h2>
+          <input 
+            type="email" 
+            class="input input-bordered w-[25rem] h-[3rem] text-sm items-center focus:outline-none focus:border-black focus:ring-0" 
+            pattern="[^ ]+" 
+            onkeypress="return event.keyCode != 32"
+            oninput="handleInput(this)"
+            placeholder="example@uni.edu.ph"
+            required
+          />
+          <p id="error-message" class="text-red-500 text-sm hidden">Please enter a valid email address.</p>
+        </div>
+
+        <div class="flex justify-center mt-4">
+          <button 
+            id="submit-button" class="btn btn-primary w-full text-white hover:bg-primary/80" disabled>
+            Request Reset Link
+          </button>
+        </div>
+
+        <h2 
+          class="text-center text-black-600  mt-4">
+          <a href="/change-email" class="text-primary hover:text-primary-focus underline">
+          Back to Login
+        </h2>
+
+      </div>
+    </div>
+  </body>
+</html>
