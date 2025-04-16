@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light dark">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Email Verification</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+
+  <body class="min-h-screen bg-primary flex items-center justify-center">
+
+    <div class="card w-[40rem] h-[40rem] bg-white shadow-2xl">
+      <div class="card-body flex flex-col gap-4">
+
+        <!-- 3D Email SVG Icon -->
+        <svg class="w-50 h-40 mb-1 mx-auto" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#4F46E5; stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#6366F1; stop-opacity:1" />
+            </linearGradient>
+            <linearGradient id="flapGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#818CF8; stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#4F46E5; stop-opacity:1" />
+            </linearGradient>
+          </defs>
+
+          <!-- Envelope Body -->
+          <rect x="20" y="60" rx="10" ry="10" width="160" height="100" fill="url(#bodyGradient)" />
+          
+          <!-- Envelope Flap -->
+          <polygon points="20,60 100,120 180,60 100,20" fill="url(#flapGradient)" />
+          
+          <!-- Envelope Lines -->
+          <polyline points="20,60 100,120 180,60" fill="none" stroke="white" stroke-width="5" />
+        </svg>
+
+        <div class="flex flex-col gap-2">
+
+          <h2 class="text-2xl font-bold text-center">Verify Your Email Address</h2>
+
+          <p class="text-center text-sm text-gray-600">Enter OTP sent to [sampleEmail@rtu.edu.ph]</p>
+            
+          <!-- OTP Input -->
+          <div class="flex justify-center gap-3 mt-4">
+            <input type="text" maxlength="1" class="input input-bordered w-[4rem] h-[5rem] text-center text-[2rem] font-bold" />
+            <input type="text" maxlength="1" class="input input-bordered w-[4rem] h-[5rem] text-center text-[2rem] font-bold" />
+            <input type="text" maxlength="1" class="input input-bordered w-[4rem] h-[5rem] text-center text-[2rem] font-bold" />
+            <input type="text" maxlength="1" class="input input-bordered w-[4rem] h-[5rem] text-center text-[2rem] font-bold" />
+            <input type="text" maxlength="1" class="input input-bordered w-[4rem] h-[5rem] text-center text-[2rem] font-bold" />
+          </div>
+        </div>
+
+        <h2 class="text-center text-gray-600">Want to Change Your Email?
+          <a href="/change-email" class="text-primary hover:text-primary-focus hover:underline">Change here
+          </a>
+        </h2>
+
+        <!-- Button -->
+        <div class="flex justify-center mt-4">
+          <button class="btn btn-primary w-80">Verify Email</button>
+        </div>
+
+        <div class="flex justify-center mt-4">
+          <h2 class="text-center text-black-600">
+            <a href="/change-email" class="text-black hover:text-primary-focus underline">Resend Code
+          </a>
+        </h2>
+        </div>
+
+        <div class="flex justify-center mt-3">
+          <h2 class="text-center text-red-600 font-bold">OTP is invalid. Please try again.</h2>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
